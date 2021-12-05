@@ -21,5 +21,5 @@ app.delete('/notes', note.remove)
 
 
 app.listen(port, () => {
-  console.log(`⚡️[server]: API rodando em http://localhost:${port}`)
+  console.log(`⚡️ API rodando em http://localhost:${port}`)
 })

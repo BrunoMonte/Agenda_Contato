@@ -6,7 +6,7 @@ const connect = async () => {
 
   if (!process.env.DATABASE_URL) throw new Error('As variáveis de ambiente em .env não foram definidas para a conexão com o banco de dados!')
 
-  const isAlreadyConnected = connection.readyState === 1
+  const isAlreadyConnected = connection.readyState === 1  //fazendo a verificação se já esta conectato
   if (isAlreadyConnected) {
     return connection
   }

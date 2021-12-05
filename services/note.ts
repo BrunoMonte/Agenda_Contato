@@ -7,7 +7,7 @@ import { Note } from '../models/noteModel'
 
 const list = async () => {
     await connect()
-    const result = await Note.find()
+    const result = await Note.find()   //fazendo listagem de tudo dentro da tabela
     return result
 }
 
@@ -57,7 +57,7 @@ const update = async (note: INote) => {
     }
     
   
-    const noteFound = await Note.findByIdAndUpdate(note.nome, note)
+    const noteFound = await Note.findByIdAndUpdate(note.nome, note) // metodos utilizado no mongoose
   
     if (!noteFound) {
       throw new Error("Nenhuma anotação encontrada para o nome informado!")
