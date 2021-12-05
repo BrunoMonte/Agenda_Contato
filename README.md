@@ -9,6 +9,9 @@ $ Abra terminal execute o seguinte: Npm install (parainstalar as dependências d
 $ Após npm start, onde api irá rodar da porta 3000
 
 # Fazendo uso do Post, Get, Put, Del
+
+##utilize o postman
+
 $ http://localhost:3000/notes
 
 $ No post irá solicitar o seguintes campos: 
