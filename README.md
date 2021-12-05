@@ -10,7 +10,7 @@ $ Após npm start, onde api irá rodar da porta 3000
 
 # Fazendo uso do Post, Get, Put, Del
 
-##utilize o postman
+## utilize o postman
 
 $ http://localhost:3000/notes
 
