@@ -12,7 +12,10 @@ const noteSchema = new mongoose.Schema({
         type: String,Number,
         required: true
     },
-    email: String
+    email: String,
+    idade: Number,
+    empresa: String, Number,
+    dn: Number
     
 
 })

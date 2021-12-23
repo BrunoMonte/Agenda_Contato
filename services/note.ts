@@ -3,15 +3,16 @@ import { connect } from '../libs/mongodb'
 import { Note } from '../models/noteModel'
 
 
+
 //Regra de negócio, par facilitar na destribuição em camadas
 
-const list = async () => {
+const listagem_cadastro = async () => {
     await connect()
     const result = await Note.find()   //fazendo listagem de tudo dentro da tabela
     return result
 }
 
-const get = async (nome: string) => {
+const get = async (nome: string | number) => {
     if (!nome) {
       throw new Error("Informe o campo nome!")
     }
@@ -24,20 +25,28 @@ const get = async (nome: string) => {
     return note
 }
 
-const create = async (note: INote ) => {
+const criar_usuario = async (note: INote ) => {
     if (!note.nome) {
-        throw new Error("Informe o campo nome!")
+        throw new Error("Informe seu nome completo!")
     }
-  
     if (!note.numero) {
-        throw new Error("Informe o campo de número!")
+        throw new Error("Informe o telefone para contato !")
     }
     if (!note.email) {
         throw new Error("Informe o campo de email!")
     }
+    if (!note.idade) {
+        throw new Error("Informe o campo de sua idade!")
+    }
+    if (!note.empresa) {
+        throw new Error("Indique o campo de empresa !")
+    }
+    if (!note.dn) {
+        throw new Error("Informe a sua data de nascimento!")
+    }
 
     
-    await Note.create(note)
+    await Note.criar_usuario(note)
     
     return true
   
@@ -80,9 +89,9 @@ const remove = async (numero: number) => {
 }
 
 export {
-    list,
+    listagem_cadastro,
     get,
-    create,
+    criar_usuario,
     update,
     remove
 }
