@@ -9,15 +9,17 @@ const noteSchema = new mongoose.Schema({
         required: true  // para informar , colocado por obrigação 
     },
     nome: {
-        type: String,Number,
+        type: String,
         required: true
     },
-    email: String,
+    email:{
+        type:String,
+        unique:true,
+        lowercase:true
+    },
     idade: Number,
-    empresa: String, Number,
     dn: Number
     
-
 })
 
 const Note = mongoose.model('notes', noteSchema) //Nome da tabela de referencia no banco

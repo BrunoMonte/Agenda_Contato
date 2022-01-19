@@ -1,9 +1,8 @@
 interface INote {
     nome: string | number,   
     numero: number,
-    email: string | number,
+    email: string,
     idade: number,
-    empresa:string | number,
     dn: number
 }
 
