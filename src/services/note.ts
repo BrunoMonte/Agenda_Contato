@@ -38,15 +38,12 @@ const criar_usuario = async (note: INote ) => {
     if (!note.idade) {
         throw new Error("Informe o campo de sua idade!")
     }
-    if (!note.empresa) {
-        throw new Error("Indique o campo de empresa !")
-    }
     if (!note.dn) {
         throw new Error("Informe a sua data de nascimento!")
     }
 
     
-    await Note.criar_usuario(note)
+    await Note.create(note)
     
     return true
   

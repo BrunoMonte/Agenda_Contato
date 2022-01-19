@@ -31,10 +31,9 @@ const criar_usuario = async (req: Request<any>, res: Response<any>) => {
         const numero = req.body.numero
         const email = req.body.email
         const idade = req.body.idade
-        const empresa = req.body.empresa
         const dn = req.body.dn  //data nascimento
         
-        const noteCreated = await note.criar_usuario({ nome, numero, email, idade, empresa, dn })
+        const noteCreated = await note.criar_usuario({ nome, numero, email, idade, dn })
         return res.json(noteCreated)
     } catch (err: any) {
         return error(res, err)

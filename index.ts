@@ -2,7 +2,7 @@ import * as dotenv from 'dotenv'
 
 import express from 'express'
 import cors from 'cors'
-import * as note from './controllers/note'
+import * as note from './src/controllers/note'
 
 dotenv.config()
 
@@ -12,9 +12,9 @@ app.use(cors())
 const port = 3000
 
 
-app.get('/notes',  note.list)
+app.get('/notes',  note.listagem_cadastro)
 app.get('/notes/:id', note.get)
-app.post('/notes', note.create)
+app.post('/notes', note.criar_usuario)
 app.put('/notes', note.update)
 app.delete('/notes', note.remove)
 
