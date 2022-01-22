@@ -2,7 +2,7 @@ import * as dotenv from 'dotenv'
 
 import express from 'express'
 import cors from 'cors'
-import * as note from './src/controllers/note'
+import * as note from './controllers/note'
 
 dotenv.config()
 

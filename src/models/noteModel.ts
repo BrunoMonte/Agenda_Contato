@@ -18,7 +18,10 @@ const noteSchema = new mongoose.Schema({
         lowercase:true
     },
     idade: Number,
-    dn: Number
+    dn: {
+        type:Number,
+        unique:true
+    }
     
 })
 
